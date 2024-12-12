@@ -116,7 +116,7 @@ class TB_DMFT:
 
 if __name__ == "__main__":
     lattice = '1D'
-    interaction_params = {'U': 100.0, 'J': 0.0}
+    interaction_params = {'U': 8.0, 'J': 0.0}
     nk_points = 100
 
     solver = TB_DMFT(lattice, interaction_params, nk_points)
