@@ -66,18 +66,16 @@ class TB_DMFT:
         return lattice_gf
 
     def extract_local_gf(self, lattice_gf):
-        """Extract the local Green's function."""
         return np.mean(lattice_gf, axis=0) #avg over k-points
 
     def solve_impurity_problem(self):
-        """Solve the impurity problem (placeholder)."""
+        #Hubbard-I approximation
         omega = 1j * np.linspace(-10, 10, 1000)  #Matsubara freqs
         delta = self.local_gf[:, 0, 0] - (1 / omega)  
         impurity_gf = 1 / (omega - self.U + delta)
         return self.U * impurity_gf
 
     def compute_spectral_function(self):
-        """Compute and plot the spectral function A($\omega$)."""
         omega = np.linspace(-10, 10, 1000)  #real freqs for spectral function
         spectral_function = -1 / np.pi * np.imag(1 / (omega + 1j * 0.01 - self.self_energy[0]))
 
