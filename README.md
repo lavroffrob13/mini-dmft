@@ -5,4 +5,5 @@ Coming:
 - Other simple impurity solvers like Hartree Fock and 2nd order perturbation theory
 - Fillings other than half
 - Finite temperature
+- Bethe ansatze comparisons
 - 2-D and 3-D lattices
